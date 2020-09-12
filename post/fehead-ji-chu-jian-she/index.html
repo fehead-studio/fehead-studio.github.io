@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>fehead基础建设 | fehead-studio</title>
+<meta name="description" content="fehead官网">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://fehead-studio.github.io/favicon.ico?v=1599905821323">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fehead-studio.github.io/styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://fehead-studio.github.io">fehead-studio</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>fehead基础建设</h1>
+            <p class="article-meta">
+              2020-09-12
+              
+                <a href="https://fehead-studio.github.io/tag/2KzAGKwVJ/" class="badge secondary">
+                  灯塔共建
+                </a>
+              
+                <a href="https://fehead-studio.github.io/tag/0AqDzIa8ne/" class="badge secondary">
+                  Nightnessss
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <blockquote>
+<p>绪论<br>
+来fehead的时候，fehead是一穷二白，快要走了，发现也是一穷二白，有种什么都没做的感觉<br>
+结合实习经历，想整一个fehead开发学习的基建，留点东西下来，让后生可以不断完善，不至于刚进来的时候有种“假大空”的感觉(这是我进fehead几个月后的主观感受)<br>
+最重要的是文档和开发流程<br>
+文档最重要：记录开发学习的内容，可以是一种总结，此为其一。留下文档可助后生快速入门，减少学习和指导成本，此为其二。来日需要对项目二次开发或者重构追加功能时，提供指导，此为其三。<br>
+开发流程次之：规范的开发流程和代码规范，可以提高共同开发的效率和减少阅读代码的难度。</p>
+</blockquote>
+<h1 id="git">git</h1>
+<h2 id="搭建git仓库">搭建git仓库</h2>
+<p>加入<code>fehead-studio</code>组织</p>
+<h2 id="流程规范">流程规范</h2>
+<h3 id="创建项目">创建项目</h3>
+<ol>
+<li>团队成员在<code>fehead-studio</code>创建仓库</li>
+<li>开发者<code>fork</code>仓库到个人账号</li>
+<li>开发者<code>clone</code>仓库到本地进行开发</li>
+</ol>
+<h3 id="开发规范">开发规范</h3>
+<ol>
+<li><code>clone</code>到本地的仓库默认分支在主分支</li>
+<li>建立新分支，新分支以本次操作命名，如：<code>add_chat_function</code></li>
+<li>当开发期间团队仓库分支发生更改，并可能与正在开发的任务发生冲突时，切换到<code>master</code>分支，<code>pull</code>新的内容，然后切换回开发分支，使用<code>rebase</code>命令进行处理，具体操作见[git文档](// TODO)</li>
+</ol>
+<p><code>注：不要在本地主分支开发，保证在pull的时候不会发生冲突</code></p>
+<h3 id="commit规范">commit规范</h3>
+<p><a href="https://juejin.im/post/6844903606815064077">参考文章</a></p>
+<pre><code>&lt;type&gt;(&lt;change_name&gt;): &lt;message&gt;
+</code></pre>
+<p>eg:</p>
+<pre><code>feat(fehead_build): add document
+</code></pre>
+<p>type参照如下：</p>
+<pre><code>feat: 新特性
+fix: 修改问题
+refactor: 代码重构
+docs: 文档修改
+style: 代码格式修改, 注意不是 css 修改
+test: 测试用例修改
+chore: 其他修改, 比如构建流程, 依赖管理
+</code></pre>
+<h3 id="合并代码">合并代码</h3>
+<ol>
+<li>开发完后<code>commit</code>代码，然后<code>push</code>到个人仓库</li>
+<li>向主仓库提<code>pull request</code></li>
+<li>找相关成员进行<code>code review</code>(代码检查)</li>
+<li>检查通过后由管理员合入仓库</li>
+</ol>
+<h1 id="文档">文档</h1>
+<h2 id="github上新建文档仓库">github上新建文档仓库</h2>
+<ol>
+<li>由管理员在团队账号上新建文档仓库</li>
+<li>文档仓库开放<code>merge</code>权限</li>
+<li>每位成员在团队仓库创建一个个人分支，提交个人的文章</li>
+<li><code>master</code>分支用于提交基础文档</li>
+</ol>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://fehead-studio.github.io/post/gong-tong-kai-fa-gui-fan/">
+                <h3 class="post-title">
+                  共同开发规范
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://fehead-studio.github.io/images/avatar.png?v=1599905821323" class="no-responsive avatar">
+    <div class="text-muted">fehead官网</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://fehead-studio.github.io/post/fehead-ji-chu-jian-she/">fehead基础建设</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fehead-studio.github.io/post/gong-tong-kai-fa-gui-fan/">共同开发规范</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://fehead-studio.github.io/tag/2KzAGKwVJ/" class="badge ">
+          灯塔共建
+        </a>
+      
+        <a href="https://fehead-studio.github.io/tag/0AqDzIa8ne/" class="badge warning">
+          Nightnessss
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://fehead-studio.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

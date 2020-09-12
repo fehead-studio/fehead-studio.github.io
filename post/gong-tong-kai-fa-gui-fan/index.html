@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>共同开发规范 | fehead-studio</title>
+<meta name="description" content="fehead官网">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://fehead-studio.github.io/favicon.ico?v=1599905821323">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fehead-studio.github.io/styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://fehead-studio.github.io">fehead-studio</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>共同开发规范</h1>
+            <p class="article-meta">
+              2020-09-12
+              
+                <a href="https://fehead-studio.github.io/tag/2KzAGKwVJ/" class="badge secondary">
+                  灯塔共建
+                </a>
+              
+                <a href="https://fehead-studio.github.io/tag/0AqDzIa8ne/" class="badge warning">
+                  Nightnessss
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <blockquote>
+<p>记一下项目开发的规范，统一开发规范可以有效提高共同开发效率和代码质量<br>
+本文档图片的 winsoullin 理解为团队正式发布的仓库，Nightnessss 理解为个人仓库</p>
+</blockquote>
+<h2 id="fork原项目">Fork原项目</h2>
+<p>进入目标仓库，<code>fork</code>项目到自己的仓库<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/fork_0.png" alt="" loading="lazy"></p>
+<p><code>fork</code>完后可以再自己的<code>GitHub</code>中找到这个仓库<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/fork_1.png" alt="" loading="lazy"></p>
+<h2 id="创建你的主题分支">创建你的主题分支</h2>
+<ol>
+<li>
+<p>将自己<code>GitHub</code>的仓库<code>clone</code>到本地<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/idea_clone_0.png" alt="" loading="lazy"><br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/idea_clone_1.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>创建新分支，分支命名尽量与改动需求相关<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/branch_0.png" alt="" loading="lazy"><br>
+创建完后可以在<code>local branches</code>看到<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/branch_1.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="代码上传">代码上传</h2>
+<ol>
+<li>在新建的分支下进行开发</li>
+<li>开发完后提交<code>commit</code><br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/commit.png" alt="" loading="lazy"></li>
+<li><code>push</code>代码，注意远程仓库为个人仓库，新建与本地分支同名的远程分支<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/push.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="发送pull-request">发送Pull Request</h2>
+<ol>
+<li>在个人仓库选中刚刚提交的分支，点击<code>pull request</code><br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_0.png" alt="" loading="lazy"></li>
+<li>创建<code>pull request</code>，注意目标仓库分支和源仓库分支<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_1.png" alt="" loading="lazy"></li>
+<li>提交完后可以在<code>pull request</code>查看信息<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_3.png" alt="" loading="lazy"><br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_2.png" alt="" loading="lazy"></li>
+<li>为这个<code>pull request</code>指定<code>reviewers</code>和<code>assignees</code>，或者直接把连接发给某人，帮你检查合并代码<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_4.png" alt="" loading="lazy"></li>
+<li>之前都是开发者视角，现在开始是审阅人的视角，审阅人可以在修改的代码段添加评论<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/code_review_0.png" alt="" loading="lazy"></li>
+<li>如果代码没问题，可以<code>approve</code>(只有<code>reviewers</code>有<code>approve</code>权限)，并评论<code>LGTM</code>(Look Good To Me[狗头])<br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/code_review_1.png" alt="" loading="lazy"></li>
+<li>仓库管理员<code>merge pull request</code><br>
+<img src="https://fehead-studio.github.io/post-images/github_ecology/pull_request_5.png" alt="" loading="lazy"></li>
+</ol>
+<hr>
+<p>参考文章: https://blog.csdn.net/yxys01/article/details/78316649</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://fehead-studio.github.io/images/avatar.png?v=1599905821323" class="no-responsive avatar">
+    <div class="text-muted">fehead官网</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://fehead-studio.github.io/post/fehead-ji-chu-jian-she/">fehead基础建设</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fehead-studio.github.io/post/gong-tong-kai-fa-gui-fan/">共同开发规范</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://fehead-studio.github.io/tag/2KzAGKwVJ/" class="badge secondary">
+          灯塔共建
+        </a>
+      
+        <a href="https://fehead-studio.github.io/tag/0AqDzIa8ne/" class="badge warning">
+          Nightnessss
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://fehead-studio.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
